@@ -1,5 +1,8 @@
 'use strict';
 
+
+//constants can be set here or in pkg
+
 angular.module('citydataApp', [
   'ngCookies',
   'ngResource',

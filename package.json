@@ -5,7 +5,12 @@
     "hapi": "2.*",
     "lout": "2.*",
     "handlebars": "1.*",
-    "grunt-hapi": "*"
+    "grunt-hapi": "*",
+    "request":"*",
+    "qs":"*",
+    "nedb": "*",
+    "q": "*",
+    "mongoose":"*"
     },
   "devDependencies": {
     "grunt": "~0.4.1",

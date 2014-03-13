@@ -2,15 +2,8 @@
 
 angular.module('citydataApp')
 .controller('MainCtrl',['$scope', 'mydb',function ($scope, mydb)  {
-	$scope.awesomeThings = [
-	'HTML5 Boilerplate',
-	'AngularJS',
-	'MAKarma'
-	];
+	
+	$scope.appname = "CityData Explorer "
 
-	$scope.db = mydb.getdb();
-
-
-	//console.log(" testing");
 }])
 
