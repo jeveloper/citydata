@@ -1,13 +1,56 @@
 
 
+ <h1>Start searching {{total}}</h1>
 
- -- header 
+ <div class="row">
+ <div class="col-lg-6 col-xs-3">
+  
+<input type="text" class="form-control" placeholder="Text input">
 
- -- saerch box input
+<input class="btn btn-default" type="submit" value="Submit">
+<p class="bg-warning" ng-show="nodata">Didn't find anything</p>
 
- -- button next to it
+
+  </div>
+
+</div>
+<div class="row">
+<div class="col-md-12">
+<table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</div>
+
+<div class="footer">
+Built with love in Toronto
+</div>
 
 
--- data grid below it
 
--- fdsfs Test me

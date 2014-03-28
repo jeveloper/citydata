@@ -8,19 +8,33 @@ angular.module('citydataApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute'
-])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  ])
+.config(function ($routeProvider) {
+  $routeProvider
+  .when('/', {
+    templateUrl: 'views/main.html',
+    controller: 'MainCtrl'
   })
-  .factory("mydb", function (){
-    return {
-      getdb: function () { return "blah blah"; },
-    }
+  .otherwise({
+    redirectTo: '/'
+  });
+})
+.factory("IssueService", function ($http, $q){
+  return {
+    search: function (_input) {  
+         var deferred = $q.defer();
+
+        $http({
+        method: "GET",
+        url: 'http://localhost:8000/issues'
+      }).success(function(json,status){
+        deferred.resolve(json);
+      }).error(function(err,status){
+
+        deferred.reject(err);
+      }); 
+      return deferred.promise;
+
+  },
+  }
 });
