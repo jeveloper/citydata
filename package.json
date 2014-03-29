@@ -2,7 +2,7 @@
   "name": "citydata",
   "version": "0.0.1",
   "dependencies": {
-    "hapi": "2.*",
+    "hapi": "3.*",
     "lout": "2.*",
     "handlebars": "1.*",
     "grunt-hapi": "*",
