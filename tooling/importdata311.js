@@ -1,7 +1,8 @@
 'use strict';
 
 require(".././lib/util");
-
+var dotenv = require('dotenv');
+dotenv.load();
 var get311Requests = require(".././lib/routes_411.js");
 
 
@@ -44,12 +45,13 @@ var curd = startDate;
 
 //mongoimport —db toronto_issues —collection requests < /Users/sergebornow/Documents/mystuff/citydata/dump.json -u issuer -p crazy321 —host ds033559.mongolab.com —port 33559
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://issuer:crazy321@ds033559.mongolab.com:33559/toronto_issues');
+var mongourl = process.env.MONGOURL;
+mongoose.connect(mongorul);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback () {
-  console.log("IM CONNECTED");
+  console.debug("IM CONNECTED");
 });
 //TODO do i need this above?
 
@@ -99,10 +101,10 @@ while(curd < new Date()){
             rec.save(function (err, record) {
 			  if (err){
 			  	console.log(">>> failed to save a record "+err);
-			  	console.dir(r1);
+			  	console.debug(r1);
 
 			  }else{
-			  	console.log(">>> Saved !");
+			  	console.debug(">>> Saved !");
 			  }
 				});
 

@@ -2,16 +2,17 @@
   "name": "citydata",
   "version": "0.0.1",
   "dependencies": {
+    "dotenv": "^0.5.1",
+    "grunt-hapi": "*",
+    "handlebars": "1.*",
     "hapi": "3.*",
     "lout": "2.*",
-    "handlebars": "1.*",
-    "grunt-hapi": "*",
-    "request":"*",
-    "qs":"*",
+    "mongoose": "*",
     "nedb": "*",
     "q": "*",
-    "mongoose":"*"
-    },
+    "qs": "*",
+    "request": "*"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.4.0",
