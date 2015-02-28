@@ -21,7 +21,9 @@
  - Data for 311 requests is available from 2009 onwards
  - Scraping is possibly by running importdata311.js , for each 25 days (maximum their api provides)
  - AngularJS based ui with bootstrap for data 
- - Grunt tasks
+ - Grunt tasks 
+ 	- grunt hapi task will start the api server
+ 	- grunt tasks provide building, checking, running livereload, jslint, etc
 
 
 
