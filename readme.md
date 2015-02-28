@@ -49,7 +49,7 @@
 
   ## Model (mongoose) for issues (properly indexes for GEO lookup)
 
-  ```
+```
 
   var IssueSchema = Schema( 
 	{ 
@@ -76,7 +76,8 @@
 
  ## Raw Access to Toronto Open data
 
- ```
+
+```
 
 https://secure.toronto.ca/webwizard/ws/requests.json?start_date=2012-02-01T00:00:00Z&end_date=2012-02-07T00:00:00Z&jurisdiction_id=toronto.ca&status=open
 
@@ -87,9 +88,9 @@ https://secure.toronto.ca/webwizard/ws/requests.json?start_date=2012-02-01T00:00
 ```
 
 
- RESPONSE OBJECT
+## RESPONSE OBJECT
 
- ```
+```
  {
 "service_requests": [
 {
